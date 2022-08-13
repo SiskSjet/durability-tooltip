@@ -16,17 +16,13 @@
   "license": "MIT",
   "icon": "assets/durabilitytooltip/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.sisksjet.durabilitytooltip.DurabilityTooltip"
-    ],
     "client": [
       "net.sisksjet.durabilitytooltip.DurabilityTooltipClient"
     ]
   },
   "mixins": [
-    "durabilitytooltip.mixins.json"
   ],
 
   "depends": {

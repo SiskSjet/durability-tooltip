@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class Tooltip {
+
+    public static final String BAR_FULL_SYMBOL = "█";
+    public static final String BAR_EMPTY_SYMBOL = "▒";
+    public static final String BAR_LINE = "[%s]";
+
     private static Formatting getFormatForDurability(int durability, int maxDurability) {
         if (durability >= 0.6f * maxDurability) {
             return Formatting.GREEN;
@@ -32,17 +37,18 @@ public class Tooltip {
         var maxDurability = itemStack.getMaxDamage();
         var durability = maxDurability - itemStack.getDamage();
         if (maxDurability > 0) {
-            if(showTooltipHint){
+            if (showTooltipHint) {
                 tooltips.add(Text.translatable("durabilitytooltip.info.bar.durability_hint").formatted(baseFormat));
             }
 
             int fullCharacters = Math.round(10f * durability / maxDurability);
             var inner = Text.literal("");
             for (var i = 0; i < 10; i++) {
-                inner.append(Text.translatable(i < fullCharacters ? "durabilitytooltip.info.bar.full_symbol" : "durabilitytooltip.info.bar.empty_symbol")).formatted(getFormatForDurability(durability,maxDurability));
+                inner.append(Text.translatable(i < fullCharacters ? BAR_FULL_SYMBOL : BAR_EMPTY_SYMBOL))
+                        .formatted(getFormatForDurability(durability, maxDurability));
             }
 
-            var bar = Text.translatable("durabilitytooltip.info.bar.bar_line", inner).formatted(baseFormat);
+            var bar = Text.translatable(BAR_LINE, inner).formatted(baseFormat);
             tooltips.add(bar);
         }
 
