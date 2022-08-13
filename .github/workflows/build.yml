@@ -9,6 +9,7 @@ on: [pull_request, push]
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         java: [17]
         os: [ubuntu-latest, windows-latest]
@@ -17,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          lfs: true
 
       - name: Validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
@@ -33,7 +36,7 @@ jobs:
           arguments: build
 
       - name: "Run Fabric Tests"
-        uses: Geometrically/fabric-test-runner@v1
+        uses: SiskSjet/fabric-test-runner@v1
         with:
           minecraftVersion: ${{ matrix.minecraftVersion }}
 
