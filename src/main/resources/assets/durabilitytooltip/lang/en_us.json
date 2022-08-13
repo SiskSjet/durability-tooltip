@@ -1,0 +1,6 @@
+{
+  "durabilitytooltip.info.bar.durability_hint": "Durability:",
+  "durabilitytooltip.info.bar.bar_line": "[%s]",
+  "durabilitytooltip.info.bar.full_symbol": "█",
+  "durabilitytooltip.info.bar.empty_symbol": "▒"
+}

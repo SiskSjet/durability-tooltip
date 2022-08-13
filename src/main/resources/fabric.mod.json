@@ -1,29 +1,32 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "durabilitytooltip",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Durability Tooltip",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "SiskSjet"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/durabilitytooltip/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.sisksjet.durabilitytooltip.DurabilityTooltip"
+    ],
+    "client": [
+      "net.sisksjet.durabilitytooltip.DurabilityTooltipClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "durabilitytooltip.mixins.json"
   ],
 
   "depends": {
