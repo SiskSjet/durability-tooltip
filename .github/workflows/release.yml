@@ -1,0 +1,37 @@
+name: publish
+on:
+  push:
+    tags: v[0-9]+.[0-9]+.[0-9]+-[1-9]+.[0-9]+.[0-9]+
+
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        java: [17]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      - name: Setup jdk ${{ matrix.java }}
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+
+      - name: Build artifacts
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
+
+      - name: Upload assets to GitHub, Modrinth and CurseForge
+        uses: Kir-Antipov/mc-publish@v3
+        with:
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          #curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -33,5 +33,11 @@
   },
   "suggests": {
     "another-mod": "*"
+  },
+  "custom": {
+    "mc-publish": {
+      "quilt": true,
+      "modrinth": "tQMRHNxH"
+    }
   }
 }
