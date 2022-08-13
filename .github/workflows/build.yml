@@ -38,18 +38,13 @@ jobs:
         with:
           arguments: build
 
-      - name: "Run Fabric Tests"
-        uses: SiskSjet/fabric-test-runner@v1
-        with:
-          minecraftVersion: ${{ matrix.minecraftVersion }}
-
       - name: Capture build artifacts
         if: ${{ runner.os == 'Linux' && matrix.java == '17' }}
         uses: actions/upload-artifact@v3
         with:
           name: Artifacts
           path: build/libs/
-          
+
   test-fabric:
     needs: build
     strategy:
