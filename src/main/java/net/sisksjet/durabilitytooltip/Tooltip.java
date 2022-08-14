@@ -44,8 +44,7 @@ public class Tooltip {
             int fullCharacters = Math.round(10f * durability / maxDurability);
             var inner = Text.literal("");
             for (var i = 0; i < 10; i++) {
-                inner.append(Text.translatable(i < fullCharacters ? BAR_FULL_SYMBOL : BAR_EMPTY_SYMBOL))
-                        .formatted(getFormatForDurability(durability, maxDurability));
+                inner.append(Text.translatable(i < fullCharacters ? BAR_FULL_SYMBOL : BAR_EMPTY_SYMBOL)).formatted(getFormatForDurability(durability, maxDurability));
             }
 
             var bar = Text.translatable(BAR_LINE, inner).formatted(baseFormat);
