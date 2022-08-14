@@ -1,7 +1,5 @@
 package net.sisksjet.durabilitytooltip;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.sisksjet.durabilitytooltip.config.ModConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
