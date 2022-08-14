@@ -20,7 +20,6 @@
   "entrypoints": {
     "client": [
       "net.sisksjet.durabilitytooltip.ModClient"
-    ],
     ]
   },
   "mixins": [
