@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "durabilitytooltip",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Durability Tooltip",
+  "description": "A simple fabric mod that show a durability bar in tooltip for items that have durability.",
   "authors": [
-    "Me!"
+    "SiskSjet"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/SiskSjet/durability-tooltip",
+    "sources": "https://github.com/SiskSjet/durability-tooltip",
+    "issues": "https://github.com/SiskSjet/durability-tooltip/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/durabilitytooltip/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "net.sisksjet.durabilitytooltip.ModClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
@@ -34,5 +34,11 @@
   },
   "suggests": {
     "another-mod": "*"
+  },
+  "custom": {
+    "mc-publish": {
+      "quilt": true,
+      "modrinth": "tQMRHNxH"
+    }
   }
 }
