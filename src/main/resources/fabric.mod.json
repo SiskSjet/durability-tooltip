@@ -9,8 +9,8 @@
     "SiskSjet"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/SiskSjet/durability-tooltip",
+    "sources": "https://github.com/SiskSjet/durability-tooltip"
   },
 
   "license": "MIT",
@@ -19,7 +19,8 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.sisksjet.durabilitytooltip.DurabilityTooltipClient"
+      "net.sisksjet.durabilitytooltip.ModClient"
+    ],
     ]
   },
   "mixins": [

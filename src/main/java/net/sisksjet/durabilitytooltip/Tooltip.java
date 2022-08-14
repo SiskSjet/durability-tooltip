@@ -33,7 +33,7 @@ public class Tooltip {
     public static Collection<Text> appendTooltip(ItemStack itemStack, TooltipContext tooltipContext) {
         var tooltips = new ArrayList<Text>();
         var baseFormat = Formatting.GRAY;
-        var showTooltipHint = true;
+        var showTooltipHint = ModClient.CONFIG.ShowTooltipHint;
         var maxDurability = itemStack.getMaxDamage();
         var durability = maxDurability - itemStack.getDamage();
         if (maxDurability > 0) {
