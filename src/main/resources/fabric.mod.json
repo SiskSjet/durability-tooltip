@@ -4,13 +4,14 @@
   "version": "${version}",
 
   "name": "Durability Tooltip",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "A simple fabric mod that show a durability bar in tooltip for items that have durability.",
   "authors": [
     "SiskSjet"
   ],
   "contact": {
     "homepage": "https://github.com/SiskSjet/durability-tooltip",
-    "sources": "https://github.com/SiskSjet/durability-tooltip"
+    "sources": "https://github.com/SiskSjet/durability-tooltip",
+    "issues": "https://github.com/SiskSjet/durability-tooltip/issues"
   },
 
   "license": "MIT",
