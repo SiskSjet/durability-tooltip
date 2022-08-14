@@ -3,7 +3,6 @@ on:
   push:
     tags: v[0-9]+.[0-9]+.[0-9]+-[1-9]+.[0-9]+.[0-9]+
 
-
 jobs:
   build:
     strategy:
@@ -30,7 +29,7 @@ jobs:
           arguments: build
 
       - name: Upload assets to GitHub, Modrinth and CurseForge
-        uses: Kir-Antipov/mc-publish@v3
+        uses: Kir-Antipov/mc-publish@v3.1
         with:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           #curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
